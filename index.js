@@ -230,11 +230,11 @@ Use getArtistByIndex to do the following:
 
 Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
-  /*Your Code Here*/
+function getArtistByIndex(array, number) {
+  return `the artist at index ${number} is ${array[number].name}`
 }
 
-
+console.log('task 3 -', getArtistByIndex(artists, 5));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use get20s to do the following: 
@@ -260,10 +260,12 @@ Use removeArtist to do the following:
 
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(array, number) {
+  array.splice(number, 1);
+  return array.length;
 }
 
+console.log('task 5 -', removeArtist(artists, 5));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -281,11 +283,20 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(array) {
+  const newArtist =   { 
+    id: 20,
+    name: 'Kenneth Mercer', 
+    years: '1998 - 2021',
+    genre: 'Web Design', 
+    nationality: 'American',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu augue pellentesque, vulputate enim eu, posuere metus. Aenean lobortis quis elit quis dapibus. Ut ante neque, molestie nec eros ac, pretium pellentesque ligula. Integer efficitur pulvinar tortor, at elementum dui porttitor non. Morbi eu commodo velit, vitae ullamcorper nunc. Donec a velit vehicula, dignissim tortor sit amet, blandit risus. Sed in libero hendrerit, feugiat lorem vel, vestibulum lorem. Sed quis augue eget dui elementum fermentum. Curabitur ac efficitur metus. Vivamus rhoncus dictum facilisis. Vivamus sed pulvinar augue, eget laoreet nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin iaculis, diam eget condimentum pharetra, urna odio pulvinar magna, dapibus ornare ligula ipsum at erat. Fusce dapibus ligula libero.'
+  }
+  array.push(newArtist);
+  return array;
 }
 
-
+console.log('task 6 -', addArtist(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
